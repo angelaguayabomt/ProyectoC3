@@ -93,9 +93,5 @@ public class Client implements Serializable{
 
     public void setReservation(List<Reservation> reservation) {
         this.reservation = reservation;
-    }
-
-    
-    
-    
+    }  
 }
