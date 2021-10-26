@@ -21,16 +21,35 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="computer")
+/**
+ * Entidad Computer
+ */
 public class Computer implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    
+    /**
+     * Atributos ID
+     */
     private Integer idComputer;
+    /**
+     * Atributos brand
+     */
     private String brand;  
-    private Integer year;  
+    /**
+     * Atributos year
+     */
+    private Integer year; 
+    /**
+     * Atributos name
+     */
     private String name;
+    /**
+     * Atributos description
+     */
     private String description;
-
+    /**
+     * Relación entre computer y category
+     */
     @ManyToOne
     @JoinColumn(name="id")
     @JsonIgnoreProperties("category")
